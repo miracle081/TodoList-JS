@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    background-color: #0b6d0e;
+}
+
+.todo-container {
+    font-family: Arial, sans-serif;
+    background-color: #c5fbac95;
+    padding: 10px;
+    border-radius: 10px;
+    width: 650px;
+    margin: 20px auto;
+}
+
+#taskInput {
+    width: 70%;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    color: #034b06;
+    background-color: white;
+}
+
+#addTaskButton {
+    background-color: #034b06;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+    color: white;
+}
+
+.list-item button {
+    height: fit-content;
+    background-color: #dd1e09;
+    color: white;
+    border: 1px solid #b61806;
+    padding: 5px 10px;
+    border-radius: 7px;
+    transition: 0.45s;
+}
+
+.list-item button:hover {
+    background-color: white;
+    color: #b61806;
+    border: 1px solid #b61806;
+}
+    </style>
+</head>
+
+<body>
+    <div class="todo-container">
+        <h1 style="color: #2a672c; background-color: transparent;">DOM</h1>
+        <div style="display: flex; background-color: transparent;">
+            <input type="text" id="taskInput" placeholder="Add a task...">
+            <button id="addTaskButton">Add Task</button>
+        </div>
+        <ul id="taskList"></ul>
+        <button id="addTaskButton" style="margin-top: 10px;" onclick="saveTasks()">Save Task</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
